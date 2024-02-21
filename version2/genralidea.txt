@@ -1,0 +1,3 @@
+use ui to make hangman game with html
+-images of different stages to be displayed on number of wrong guesses
+-put different 
