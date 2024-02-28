@@ -1,3 +1,6 @@
 use ui to make hangman game with html
 -images of different stages to be displayed on number of wrong guesses
--put different 
+-take input in textbox
+use python and eel to check if word is correct and update wrongs and get word.
+use js to change tags in html.
+use some css to beutify
