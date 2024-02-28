@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pvp</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="/eel.js"></script> 
+</head>
+<body>
+    <div>
+        <h1>Hangman</h1>
+        <span hidden id="wrongs">0</span>
+    </div>
+    <div>
+        <img src="hangmanbank.png" width="500" height="400" id="img">
+    </div>
+    <div>
+        <p id="word"></p>
+    </div>
+    <div id="input">
+        <div id="hangword"></div>
+        <label for="inp">letter:</label>
+        <input id="inp" type="text" maxlength="1">
+        <input id="submit" type="button" value="check" onclick="check_letter()">
+        <span id="op"></span>
+    </div>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
