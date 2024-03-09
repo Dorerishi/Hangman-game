@@ -9,6 +9,7 @@ function display_hangman(){
     }
     else if(wrongs==3){
         image.src="hangmanfinal.png";
+        play_again()        
     }
     else{
         image.src="hangmanbank.png";
@@ -16,11 +17,12 @@ function display_hangman(){
 }
 
 function check_letter(){
-    display_hangman();
+    let hword=document.getElementById("word");
+    eel.Win_or_loss(hword.innerText)().then(checkwin);
     let wrongs=document.getElementById("wrongs").innerText;
     let letter=document.getElementById("inp");
     eel.play_hangman(wrongs,letter.value)().then(setop);
-    display_hangman();
+    
 }
 
 function setop(value){
@@ -31,7 +33,27 @@ function setop(value){
     wrong.innerText=val[0];
     op.innerText=val[1];
     word.innerText=val[2];
-    display_hangman()
+    display_hangman();
+}
+
+function play_again(){
+    if (confirm("Do you want to play again?")) {
+        eel.init();
+        let wrong=document.getElementById("wrongs");
+        wrong.innerText="0";
+        let word=document.getElementById("word");
+        word.innerText="type # to restart";
+      } else {
+        window.close()
+      }
+}
+
+function checkwin(value){
+    let val=value;
+    console.log(val);
+    if (val=="True"){
+        play_again();
+    }
 }
 
 
